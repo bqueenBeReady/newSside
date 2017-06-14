@@ -17,5 +17,4 @@ def haversine(a,b):
     return km*0.9
 
 
-def getPushIds(users, currLocation, dist):
-    
+# def getPushIds(users, currLocation, dist):

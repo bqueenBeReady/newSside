@@ -4,6 +4,8 @@ Python Aplication Template
 Licence: GPLv3
 """
 from flask import Flask
+from app.helpers import *
+from app.elements import *
 import requests
 import pyrebase
 
@@ -28,7 +30,7 @@ token = user['idToken']
 
 @app.route('/')
 def index():
-    print(db.child('msgs').push({'hello': 'world'}, token))
+    print(db.child('users').push({'hello':'world'}, token))
     return "<html><body><h1>'Hello World'</h1></body></html>"
 
 
